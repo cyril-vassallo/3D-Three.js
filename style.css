@@ -1,0 +1,12 @@
+body {
+    margin:0;
+}
+
+#web-gl-scene {
+  width: 100vw;
+  height: 100vh;
+  display: block;
+  background-color: black;
+  background:url("./background/code.jpg")  no-repeat center center;
+  background-size: cover;
+}
