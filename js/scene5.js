@@ -1,7 +1,7 @@
 /**
  * Global variables
  */
-var scene, camera, renderer, canvas;
+var scene, camera, renderer, canvas, distance;
 
 
 /**
@@ -46,6 +46,7 @@ function init() {
  */
 function renderElements() {
 
+  distance = 1000;
 
   const texture = new THREE.TextureLoader().load(
     "./sprite/js.png"
@@ -61,10 +62,9 @@ function renderElements() {
   const jsMesh = new THREE.Mesh(geometry, material);
   jsMesh.position.x = 0;
   jsMesh.position.y = 0;
-  jsMesh.position.z = 1300;
+  jsMesh.position.z = 1100;
 
   scene.add(jsMesh);
- 
 
 
 
@@ -97,13 +97,16 @@ function animate() {
       const reactMesh = new THREE.Mesh(geometry, material);
       reactMesh.position.x = 0;
       reactMesh.position.y = 0;
-      reactMesh.position.z = 1000;
+      reactMesh.position.z = 1300;
 
       scene.add(reactMesh);
 
-
+      
+      
+      
       renderer.render(scene, camera);
-    
+      
+
   }
 
   document.addEventListener("mousemove", onMouseMove, false);
